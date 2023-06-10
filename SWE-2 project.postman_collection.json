@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "3009c320-bd5d-4931-ba09-d2671db1dc90",
+		"name": "SWE-2 project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27075375"
+	},
+	"item": [
+		{
+			"name": "Authentecation",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\":\"Mohannad\",\r\n    \r\n         \"email\":\"user@example.com\",\r\n    \"password\": \"password\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user@example.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user@example.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "7355a4360d1acbf2573fb9f75d021ccd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "iphone 14 pro max",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "amvoioidfkj  dsfpasdkfpggjoisjfoifspdfkopdsfs",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12305.00",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/F:/Killua20pfp.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/products",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "token",
+										"value": "7355a4360d1acbf2573fb9f75d021ccd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "black adam 2",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "action & adventure movie 2",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/F:/KkJ3N33.jpg"
+										},
+										{
+											"key": "price",
+											"value": "14500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/products/6",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "7355a4360d1acbf2573fb9f75d021ccd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:3000/products/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"5"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Orders",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "List Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/products",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Cart",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "token",
+										"value": "7355a4360d1acbf2573fb9f75d021ccd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":\"2\",\r\n    \"quantity\":\"12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/cart/7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Cart item",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "7355a4360d1acbf2573fb9f75d021ccd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":\"2\",\r\n    \"quantity\":\"12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/cart/7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Review Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "9fe57a3afa555763a86bb72a455429cd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":\"1\",\r\n    \"review\":\"asjdasjhasuihfauih\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/products/review",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products in cart",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/cart/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add to cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "9fe57a3afa555763a86bb72a455429cd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"6\",\r\n    \"quantity\":\"203\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/cart/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products in cart by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/cart/7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "place Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "9fe57a3afa555763a86bb72a455429cd",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/order",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
