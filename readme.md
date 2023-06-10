@@ -17,7 +17,7 @@ This GitHub repository houses a comprehensive backend solution for an ecommerce 
 ### Installation and Setup
 1. Clone the repository using the command:
    ```
-   git clone https://github.com/your-username/ecommerce-backend.git
+   git clone https://github.com/mohannadnasreldin/Ecommerce-Backend.git
    ```
 
 2. Navigate to the project directory:
@@ -45,10 +45,8 @@ For detailed information about the available APIs and their usage, refer to the 
 ### Contributing
 Contributions to this project are welcome! If you find any bugs, have feature requests, or want to make improvements, please feel free to submit a pull request. Be sure to follow the established coding style and include appropriate tests for your changes.
 
-### License
-This project is licensed under the MIT License. You can find more information in the [LICENSE](link-to-license-file) file.
 
 ### Disclaimer
 Please note that this project is for educational and demonstration purposes only. It may not be production-ready without additional customization and security considerations.
 
-Feel free to reach out to the project maintainer at `email@example.com` for any further inquiries or support. We hope this ecommerce backend project serves as a valuable resource for your development endeavors!
+Feel free to reach out to the project maintainer at `mohannadnasr.20@gmail.com` for any further inquiries or support. We hope this ecommerce backend project serves as a valuable resource for your development endeavors!
